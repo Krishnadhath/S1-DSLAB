@@ -35,7 +35,15 @@ void enqueue(int value){
         front++;
     }
     void display(){
-        
+        if (front == -1 || front > rear) {
+        printf("Queue is empty!\n");
+        return;
+        }
+         printf("Queue: ");
+         for (int i = front; i <= rear; i++) {
+        printf("%d ", queue[i]);
+        }
+        printf("\n");
 
     }
 
@@ -44,7 +52,12 @@ void enqueue(int value){
 
 int main(){
     enqueue(29);
-    enqueue(20);
+    enqueue(40);
+    enqueue(70);
+    enqueue(90);
+    display();
+
     dequeue();
+    display();
 
 }
