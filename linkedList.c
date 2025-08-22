@@ -8,6 +8,7 @@ struct Node{
 
 
 
+
 int main(){
     struct Node* head = NULL;
     struct Node* first = malloc(sizeof(struct Node));
@@ -15,6 +16,7 @@ int main(){
     struct Node* second = malloc(sizeof(struct Node));
     first ->next= second;
     second->data = 90;
+    
     second ->next = NULL;
     //printf("%d " , first->data);
     head = first;
@@ -33,48 +35,6 @@ int main(){
         temp = temp->next; 
     }
     printf("NULL");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return 0;
 
 }
