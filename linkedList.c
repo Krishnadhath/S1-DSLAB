@@ -100,6 +100,23 @@ struct Node* deletefrombeginning(struct Node* head) {
     free(temp); // Free old head
     return head;
 }
+struct Node*  deletefromend(struct Node* head) {
+    if (head == NULL) {
+        return NULL; // List is empty
+    }
+    if (head->next == NULL) {
+        free(head); // Only one node in the list
+        return NULL;
+    }
+    struct Node* temp = head;
+    while (temp->next->next != NULL) {
+        temp = temp->next; // Move to the second last node
+    }
+    free(temp->next); // Free the last node
+    temp->next = NULL; // Set the next of second last node to NULL
+    return head;
+}
+ 
 int main() {
     struct Node* head = NULL;
 
