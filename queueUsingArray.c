@@ -9,6 +9,7 @@ void enqueue(int value){
     if(rear == 9){
     printf("queue full");
     }
+    
     if(front == -1){
         front=0;
         rear++;
