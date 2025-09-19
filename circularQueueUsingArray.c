@@ -5,17 +5,16 @@
 int queue[MAX];
 int front = -1, rear = -1;
 
-// Check if the Queue is full
 int isFull() {
     return (front == 0 && rear == MAX - 1) || (front == rear + 1);
 }
 
-// Check if the Queue is empty
+
 int isEmpty() {
     return front == -1;
 }
 
-// Add element to the Queue
+
 void enqueue(int value) {
     if (isFull()) {
         printf("Queue is full\n");
@@ -29,7 +28,7 @@ void enqueue(int value) {
     }
 }
 
-// Remove element from the Queue
+
 void dequeue() {
     if (isEmpty()) {
         printf("Queue is empty\n");
@@ -43,7 +42,7 @@ void dequeue() {
     }
 }
 
-// Display elements in the Queue
+
 void display() {
     if (isEmpty()) {
         printf("Queue is empty\n");
@@ -57,7 +56,7 @@ void display() {
     }
 }
 
-// Main menu for user interaction
+
 int main() {
     int choice, value;
 
